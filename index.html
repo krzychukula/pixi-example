@@ -105,16 +105,16 @@
 	wavesTilingSprite.alpha = 0.2;
 	stage.addChild(wavesTilingSprite);
 	//
-	// // create a displacment map (the texture must be a power of two for the filter)
-	// var waveDisplacementTexture = PIXI.Texture.fromImage("img/displacementMap.jpg");
-	// var displacementFilter = new PIXI.DisplacementFilter(waveDisplacementTexture);
-	//
-	// // apply the filters to the stage
-	// stage.filters = [displacementFilter];
-	//
-	// // configure the displacement filter..
-	// displacementFilter.scale.x = 25;
-	// displacementFilter.scale.y = 25;
+	// create a displacment map (the texture must be a power of two for the filter)
+	var waveDisplacementTexture = PIXI.Texture.fromImage("img/displacementMap.jpg");
+	var displacementFilter = new PIXI.DisplacementFilter(waveDisplacementTexture);
+
+	// apply the filters to the stage
+	stage.filters = [displacementFilter];
+
+	// configure the displacement filter..
+	displacementFilter.scale.x = 25;
+	displacementFilter.scale.y = 25;
 	//
 	// var tick = 0;
 	requestAnimationFrame(animate);

@@ -122,21 +122,21 @@
 	function animate()
 	{
 	// 	// iterate through the fish and update the positiond
-	// 	for (var i = 0; i < fishArray.length; i++)
-	// 	{
-	// 		var fish = fishArray[i];
-	// 		fish.direction += fish.turningSpeed * 0.01;
-	// 		fish.position.x += Math.sin(fish.direction) * fish.speed;
-	// 		fish.position.y += Math.cos(fish.direction) * fish.speed;
-	// 		fish.rotation = -fish.direction - Math.PI/2;
-	//
-	// 		// wrap the fish by testing there bounds..
-	// 		if(fish.position.x < fishBounds.x)fish.position.x += fishBounds.width;
-	// 		else if(fish.position.x > fishBounds.x + fishBounds.width)fish.position.x -= fishBounds.width
-	//
-	// 		if(fish.position.y < fishBounds.y)fish.position.y += fishBounds.height;
-	// 		else if(fish.position.y > fishBounds.y + fishBounds.height)fish.position.y -= fishBounds.height
-	// 	}
+		for (var i = 0; i < fishArray.length; i++)
+		{
+			var fish = fishArray[i];
+			fish.direction += fish.turningSpeed * 0.01;
+			fish.position.x += Math.sin(fish.direction) * fish.speed;
+			fish.position.y += Math.cos(fish.direction) * fish.speed;
+			fish.rotation = -fish.direction - Math.PI/2;
+
+			// wrap the fish by testing there bounds..
+			if(fish.position.x < fishBounds.x)fish.position.x += fishBounds.width;
+			else if(fish.position.x > fishBounds.x + fishBounds.width)fish.position.x -= fishBounds.width
+
+			if(fish.position.y < fishBounds.y)fish.position.y += fishBounds.height;
+			else if(fish.position.y > fishBounds.y + fishBounds.height)fish.position.y -= fishBounds.height
+		}
 	//
 	// 	// increment the ticker
 	 	tick += 0.1;

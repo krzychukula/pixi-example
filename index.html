@@ -91,19 +91,19 @@
 
 	}
 	//
-	// // create a bounding box box for the little fish
-	// var fishBoundsPadding = 100;
-	// var fishBounds = new PIXI.Rectangle(-fishBoundsPadding,
-	// 									-fishBoundsPadding,
-	// 									viewWidth + fishBoundsPadding * 2,
-	// 									viewHeight + fishBoundsPadding * 2);
+	// create a bounding box box for the little fish
+	var fishBoundsPadding = 100;
+	var fishBounds = new PIXI.Rectangle(-fishBoundsPadding,
+										-fishBoundsPadding,
+										viewWidth + fishBoundsPadding * 2,
+										viewHeight + fishBoundsPadding * 2);
+
 	//
-	//
-	// // create a new wave texture to add over the fish
-	// var waveTexture = PIXI.Texture.fromImage("img/waves.png");
-	// var wavesTilingSprite = new PIXI.TilingSprite(waveTexture, viewWidth, viewHeight);
-	// wavesTilingSprite.alpha = 0.2;
-	// stage.addChild(wavesTilingSprite);
+	// create a new wave texture to add over the fish
+	var waveTexture = PIXI.Texture.fromImage("img/waves.png");
+	var wavesTilingSprite = new PIXI.TilingSprite(waveTexture, viewWidth, viewHeight);
+	wavesTilingSprite.alpha = 0.2;
+	stage.addChild(wavesTilingSprite);
 	//
 	// // create a displacment map (the texture must be a power of two for the filter)
 	// var waveDisplacementTexture = PIXI.Texture.fromImage("img/displacementMap.jpg");
